@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.root {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Inter, sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #75CE00;
+}
+.header .logo {
+    margin-top: 10px;
+}
+.bottom-navigation {
+    display: flex;
+    background-color: #75CE00;
+}
+.bottom-navigation-item {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+}
+.bottom-navigation-item .icon {
+    width: 32px;
+    height: 32px;
+}
+
+
+.main {
+    flex: 1;
+    overflow-y: auto;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container {
+    margin-top: 12px;
+}
+.card-line {
+    margin-top: 24px;
+    display: flex;
+    align-items: space-between;
+    gap: 36px;
+}
+.card {
+    flex: 1;
+    background: black;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+}
+.card-background {
+    opacity: 0.5;
+}
+.card-text {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: white;
+}
+
+.bet-container {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: #035E0C;
+    border-radius: 8px;
+    display: flex;
+}
+.bet-container-score {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid white;;
+}
+.bet-score-item {
+    width: 100px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+.bet-container-main {
+    display: flex;
+    flex-direction: column;
+}
+.bet-container .next-game {
+    border-bottom: 2px solid white;
+}
+.bet-container .next-game, .bet-container .next-game-bet {
+    padding: 15px;
+}
+
+.bet-container-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+}
+
+.next-game-bet-background {
+    margin-top: 8px;
+    width: 100%;
+    background-color: #7FEF4B;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.next-game-bet-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.next-game-bet-team img {
+    width: 32px;
+    height: 32px;
+}
+
+.bet-tabs {
+    margin-top: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+}
+.tab-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-weight: bold;
+    background-color: white;
+    font-size: 0.8em;
+}
+.tab-team.tab-selected {
+    background-color: #7FEF4B;
+    color: white;
+}
+
+.bet-values {
+    margin-top: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+}
+.bet-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    flex: 1;
+    font-size: 2em;
+}
+
+
+
+
+
+.award-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #035E0C;
+    padding: 80px 40px 30px 40px;
+}
+.award-item {
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    color: #035D0C;
+    padding: 4px;
+}
+.award-icon {
+    padding: 4px;
+}
+.award-position {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 4px;
+}
+.award-text {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-weight: bold;
+}
+.award-score {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 4px;
+}
+
+.award-list-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: #035E0C;
+    font-weight: bold;
+    color: white;
+}
+.award-list {
+    width: 100%;
+}
+.award-list .award-item {
+    padding: 20px 16px;
+    border-radius: 0;
+    border-bottom: 2px solid #75CE00;
+}
+.award-item-current {
+    background-color: #75CE00;
+    color: white;
+}
+
+.games-switch-container {
+    display: flex;
+    margin-top: 24px;
+    background-color: #035E0C;
+    border-radius: 8px;
+    width: 300px;
+    font-weight: bold;
+    color: white;
+}
+.game-switch-option {
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+}
+.game-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-item {
+    display: flex;
+    width: 300px;
+    background-color: #035E0C;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.game-teams {
+    padding: 14px 24px;
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.game-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.game-team-flag {
+    width: 36px;
+    height: 36px;
+}
+.game-team-flag img {
+    width: 100%;
+    height: 100%;
+}
+.game-team-name {
+    flex: 1;
+    font-weight: bold;
+}
+.game-date {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border-left: 2px solid white;
+    width: 150px;
+    height: 90px;
+}
+
+.title {
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+
+
+.next-game-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+.next-game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url('../images/background/next-game.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+}
+.card-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.card-teams {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.team-flag {
+    width: 80px;
+    height: 80px;
+}
+.team-flag img {
+    width: 100%;
+    height: 100%;
+}
+.team-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-cta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-cta .bet-now {
+    text-decoration: none;
+    border: 4px solid #929191;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 4px 8px;
+    cursor: pointer ;
+}
+
+
+
+.bet-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url('../images/background/bet.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 0 8px 8px;
+    padding: 60px 20px;
+    color: white;
+    font-weight: bold;
+}
+.card-team-points {
+    font-size: 2em;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding: 0 40px;
+    align-self: center;
+}
+
+.bet-resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+    padding: 20px;
+}
+.bet-resume {
+    width: 100%;
+    flex: 1;
+    background-color: #EAE7E7;
+    padding: 10px 20px 20px 20px;
+    border-radius: 8px;
+}
+.bet-resume-title {
+    margin-top: 14px;
+    font-weight: bold;
+}
+.bet-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.bet-team .team-flag {
+    width: 69px;
+    height: 69px;
+}
+
+.bet-bar {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 100%;
+    height: 2px;
+    background-color: #808080;
+    position: relative;
+}
+.bet-bar-value {
+    position: absolute;
+    top: 0;
+    height: 2px;
+    background-color: #75CE00;
+    display: inline-block;
+}
+.bet-bar-circle {
+    right: -20px;
+    top: -10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.bet-bar-circle:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #75CE00;
+    background-color: white;
+    top: -4px;
+    left: -4px;
+}
+.bet-resume-total {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14px;
+    color: #75CE00;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.bet-button {
+    margin: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #75CE00;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    width: 90%;
+}
+
+
+
+.hint-container {
+    width: 100%;
+    background-image: linear-gradient(to bottom, #00000080, #00000080), url('../images/background/main.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 10px;
+}
+
+.hint-positions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+    padding: 20px;
+}
+.hint-position {
+    height: 180px;
+    padding-top: 80px;
+}
+.hint-position:nth-child(2) {
+    padding-top: 0;
+}
+.hint-points {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 24px;
+    padding: 20px;
+}
+
+.hint-random-image {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
